@@ -1,4 +1,5 @@
-const root = ReactDOM.createRoot(document.getElementById("root"));
+import React from "react";
+import ReactDOM from "react-dom"; // Use "react-dom/client" for React 18
 
 const nestedElement = React.createElement(
   "div",
@@ -9,6 +10,8 @@ const nestedElement = React.createElement(
   ])
 );
 
+const root = ReactDOM.createRoot(document.getElementById("root")); // Correct method
+
 console.log(nestedElement); // will be an object
 
-root.render(nestedElement);
+root.render(nestedElement); // Correctly render the element
